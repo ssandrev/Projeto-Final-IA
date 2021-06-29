@@ -4,8 +4,9 @@ public class Horario {
 	private final int horas;
 	private final String[] materia =  new String[2];
 	
-	public Horario(int horas) {
+	public Horario(int horas, String materia) {
         this.horas = horas;
+        this.materia[0] = materia;
     }
 	
 	public void setMateria(int i, String materia) {
@@ -24,13 +25,8 @@ public class Horario {
 	    			es += " ";
 	    		}
 	    		es += materia[i];
-	    		
 	    	}
-	    	
 	    }
-	            
-	    System.out.println();
-	    System.out.println("Suas matéria são: ");
 	    return es;
 	}
 

@@ -2,18 +2,18 @@ package psr;
 
 public class Variavel {
 	private final String nome;
-	private final int horas;
+	private final int bloco;
 	
-	public Variavel(String nome, int horas) {
+	public Variavel(String nome, int bloco) {
         this.nome = nome;
-        this.horas = horas;
+        this.bloco = bloco;
     }
-
-	public int getHoras() {
-		return horas;
-	}
-
+	
 	public String getNome() {
 		return nome;
+	}
+
+	public int getBloco() {
+		return bloco;
 	}
 }

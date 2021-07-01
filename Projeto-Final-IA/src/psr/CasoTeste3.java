@@ -2,27 +2,57 @@ package psr;
 
 import java.util.ArrayList;
 
-public class CasoTeste1 {
+public class CasoTeste3 {
+
+
 	private final Horario[][] horario= new Horario[10][6];
 	
-	public CasoTeste1(){
+	public CasoTeste3(){
 		for (int i = 0; i<10;i++) {
 			for(int j = 0;j<6;j++) {
-				this.horario[i][j] = new Horario(1);
+				this.horario[i][j] = new Horario(1);//"--------"
 			}
 		}
-		horario[2][1].setMateria(0, "COMP0455");
-		horario[3][1].setMateria(0, "COMP0455");
-		horario[2][3].setMateria(0, "COMP0455");
-		horario[3][3].setMateria(0, "COMP0455");
+		//linha 1 2
+		horario[0][0].setMateria(0, "ELET0043");
+		horario[1][0].setMateria(0, "ELET0043");
 		
-		horario[6][3].setMateria(0, "COMP0481");
-		horario[7][3].setMateria(0, "COMP0481");
+		horario[0][1].setMateria(0, "MATE0096");
+		horario[1][1].setMateria(0, "MATE0096");
+		horario[0][3].setMateria(0, "MATE0096");
+		horario[1][3].setMateria(0, "MATE0096");
 		
-		horario[8][0].setMateria(0, "COMP0408");
-		horario[9][0].setMateria(0, "COMP0408");
-		horario[8][2].setMateria(0, "COMP0408");
-		horario[9][2].setMateria(0, "COMP0408");
+		horario[0][2].setMateria(0, "MATE0154");
+		horario[1][2].setMateria(0, "MATE0154");
+		horario[0][4].setMateria(0, "MATE0154");
+		horario[1][4].setMateria(0, "MATE0154");
+		
+		//linha 3 4
+		horario[2][0].setMateria(0, "ESTA0011");
+		horario[3][0].setMateria(0, "ESTA0011");
+		horario[2][2].setMateria(0, "ESTA0011");
+		horario[3][2].setMateria(0, "ESTA0011");
+		
+		horario[2][1].setMateria(0, "COMP0409");
+		horario[3][1].setMateria(0, "COMP0409");
+		horario[2][3].setMateria(0, "COMP0409");
+		horario[3][3].setMateria(0, "COMP0409");
+		
+		//linha 5 6
+		horario[4][1].setMateria(0, "COMP0412");
+		horario[5][1].setMateria(0, "COMP0412");
+		horario[4][3].setMateria(0, "COMP0412");
+		horario[5][3].setMateria(0, "COMP0412");
+		
+		horario[4][0].setMateria(0, "COMP0415");
+		horario[5][0].setMateria(0, "COMP0415");
+		horario[4][2].setMateria(0, "COMP0415");
+		horario[5][2].setMateria(0, "COMP0415");
+		
+		horario[4][4].setMateria(0, "COMP0417");
+		horario[5][4].setMateria(0, "COMP0417");
+		
+		
 	}
 	public Horario[][] getHorario() {
 		return this.horario;
@@ -30,7 +60,6 @@ public class CasoTeste1 {
 	public String toString()
 	{
 	    String es = new String();
-
 	    for(int i = 0; i < 10; i++)
 	        {
 	            for(int j = 0; j < 6; j++)

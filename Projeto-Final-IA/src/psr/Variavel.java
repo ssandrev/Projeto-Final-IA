@@ -8,12 +8,16 @@ public class Variavel {
         this.nome = nome;
         this.bloco = bloco;
     }
-	
-	public String getNome() {
-		return nome;
-	}
 
 	public int getBloco() {
 		return bloco;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+	
+	public double Horas_Pedidas() {
+		return this.bloco * 0.5;
 	}
 }

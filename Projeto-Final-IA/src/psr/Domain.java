@@ -1,5 +1,7 @@
 package psr;
 
+/* Class que guarda as posições livres na tabela de horários*/
+
 import java.util.ArrayList;
 
 public class Domain {
@@ -15,6 +17,10 @@ public class Domain {
 	
 	public void setDomain(ArrayList<Horario> tabela){
 		this.domain = tabela;
+	}
+	
+	public int Domain_size() {
+		return domain.size();
 	}
 }
 

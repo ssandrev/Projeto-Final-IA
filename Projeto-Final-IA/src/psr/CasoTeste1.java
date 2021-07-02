@@ -2,6 +2,8 @@ package psr;
 
 import java.util.ArrayList;
 
+import javafx.util.Pair;
+
 public class CasoTeste1 {
 	private final Horario[][] horario= new Horario[10][6];
 	
@@ -77,8 +79,52 @@ public class CasoTeste1 {
 	                }
 	            es += '\n';
 	        }
-	    System.out.println();
-	    System.out.println("Your matrix: ");
+
 	    return es;
+	}
+	
+	private ArrayList<ArrayList<Double>> horasVagas() {
+		
+		ArrayList<ArrayList<Double>> vagas = new ArrayList<ArrayList<Double>>(6);
+		
+		double vago = 0;
+		
+		for(int i = 0; i < 6; i++)
+        {
+			ArrayList<Double> d1 = new ArrayList<Double>();
+            for(int j = 0; j < 10; j++)
+                {
+            		
+                    if (horario[j][i].getMateria() == null){
+                    	vago ++;
+                    }else {
+                    	vago += horario[i][j].getHoras();
+                    	if(vago > 0)    d1.add(vago);
+                    	vago = 0;
+                    }
+                }
+            if(vago > 0)    d1.add(vago);
+            vago = 0;
+            vagas.add(d1);
+        }
+		return vagas;
+	}
+	
+	public Pair<ArrayList<Double>, ArrayList<ArrayList<Double>>> horasTotaisSS() {
+		ArrayList<Double> total = new ArrayList<Double>(2);
+		
+		ArrayList<ArrayList<Double>> horasV = this.horasVagas();
+		double horas = 0;
+		for (int i = 0; i < horasV.size(); i++) {
+            for (int j = 0; j < horasV.get(i).size(); j++) {
+               horas += horasV.get(i).get(j);
+            }
+            if (i >= 4){
+            	total.add(horas);
+            }
+            
+        }
+		
+		return new Pair<ArrayList<Double>, ArrayList<ArrayList<Double>>>(total,horasV);
 	}
 }

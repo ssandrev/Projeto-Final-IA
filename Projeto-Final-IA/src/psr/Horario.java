@@ -1,11 +1,11 @@
 package psr;
 
 public class Horario {
-	private final int horas;
+	private double horas;
 	private final String[] materia =  new String[2];
 	
-	public Horario(int horas) {
-        this.horas = horas;
+	public Horario(double horas) {
+		this.horas = horas;
         this.materia[0] = null;
     }
 	
@@ -13,13 +13,17 @@ public class Horario {
 		this.materia[i] = materia;
 	}
 	
-	public int getHoras() {
+	public double getHoras() {
 		return horas;
 	}
 	public String getMateria() {
 		return materia[0];
 		
 	}
+	public void setHoras(double d) {
+			this.horas = d;
+	}
+	
 	public String MateriaToString() {
 	    String es = new String();
 	    for (int i = 0; i< 2; i++) {

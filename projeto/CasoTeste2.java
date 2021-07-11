@@ -3,7 +3,10 @@ package aima.core.search.csp.projeto;
 import java.util.ArrayList;
 import java.util.Collections;
 
-
+/*
+ * Classe de Suporte para criação do Caso 2 exemplificado
+ * pelo professor.
+ */
 public class CasoTeste2 {
 	
 	//matrix do Caso de teste 2
@@ -162,7 +165,7 @@ public class CasoTeste2 {
 	                    if (horario[i][j].getMateria() == null){
 	                    	es += Cores.ANSI_BLACK + "--------" + Cores.ANSI_RESET;
 	                    }else {
-	                    	es += horario[i][j].toString();
+	                    	es += horario[i][j].MateriaToString();
 	                    }
 	                    es += "]";
 	                }

@@ -8,6 +8,12 @@ import aima.core.search.csp.examples.NotEqualConstraint;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/*
+ * Classe principal, nela é criada o PSR, ou seja,
+ * são definidas as variáveis, o domínio e as restrições para
+ * cada variável.
+ */
+
 public class WeeklyMapCSP extends CSP<Variable, TuplaIntInt>{
 	
 	
@@ -30,10 +36,10 @@ public class WeeklyMapCSP extends CSP<Variable, TuplaIntInt>{
 			contador++;
 		}
 		
-		//Restriçao do Sábado	
 		//Criação do dominio
 		ArrayList<TuplaIntInt> dominio = new ArrayList<TuplaIntInt>();
 		int dias;
+		//Pré-processamento do sábado
 		if (SabadoIsNeeded(blocos,horasVagas))  dias = 6;
 			
 		else  dias = 5;
@@ -49,13 +55,11 @@ public class WeeklyMapCSP extends CSP<Variable, TuplaIntInt>{
 		
 		Domain<TuplaIntInt> horarios = new Domain<>(dominio);
 		
-		//Setar o domínio das variáveis para ser igual ao definido
+		//Definir o domínio das variáveis para ser igual ao definido
 		for(Variable var : getVariables())
 			setDomain(var, horarios);
 		
-		//Setar as Restrições
-		
-		//Restrição de Não deve ser igual
+		//Definição da Restrição NotEqual
 		for (int i = 0; i < getVariables().size(); i++) {
 			Variable var1 = getVariables().get(i);
 			for (int j = i+1; j < getVariables().size(); j++) {
@@ -65,6 +69,7 @@ public class WeeklyMapCSP extends CSP<Variable, TuplaIntInt>{
 		}
 	}
 	
+	//Método que faz um pré-processamento para saber se o sábado é necessário ou não
 	private boolean SabadoIsNeeded(ArrayList<Tupla> blocos, ArrayList<Double> horasVagas) {
 			
 		boolean sabado = false;

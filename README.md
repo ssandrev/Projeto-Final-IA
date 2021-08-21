@@ -7,8 +7,7 @@
 
 
 # English Version
-
-# Final-Project-IA
+## Final-Project-IA
 #### Final project of artificial intelligence subject using Aima3e
 
 - The Group composed of André Vitor Santana Souza and Marcos Francisco Linhares Silva, supervised by Professor Carlos Alberto Estombelo Montesco, was responsible for solving a problem of time allocation for students using the PSR (Constraint Solution Problem) artificial intelligence approach.

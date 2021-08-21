@@ -6,7 +6,7 @@
 - Neste Github está as classes em java que compõem o algoritmo proposto pelo grupo para solucionar este problema, bem como um manual de usuário para instalação da demo do projeto.
 
 
-#English Version
+# English Version
 
 # Final-Project-IA
 #### Final project of artificial intelligence subject using Aima3e

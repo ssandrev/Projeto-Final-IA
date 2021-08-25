@@ -13,3 +13,7 @@
 - The Group composed of André Vitor Santana Souza and Marcos Francisco Linhares Silva, supervised by Professor Carlos Alberto Estombelo Montesco, was responsible for solving a problem of time allocation for students using the PSR (Constraint Solution Problem) artificial intelligence approach.
 
 - In this Github are the java classes that make up the algorithm proposed by the group to solve this problem, as well as a user manual for installing the project's demo.
+
+
+#Link to presentation (Portuguese)
+https://youtu.be/u_ZKUMkhkMI

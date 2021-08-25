@@ -15,5 +15,8 @@
 - In this Github are the java classes that make up the algorithm proposed by the group to solve this problem, as well as a user manual for installing the project's demo.
 
 
-#Link to presentation (Portuguese)
-https://youtu.be/u_ZKUMkhkMI
+# Links  
+## presentation (Portuguese)
+- https://youtu.be/u_ZKUMkhkMI
+## slideshow
+- https://docs.google.com/presentation/d/1hKuERTaX7y0E_x35v2c3wE71tjxo1XCoNsv2vGlEptk/edit?usp=sharing
